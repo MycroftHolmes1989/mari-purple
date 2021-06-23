@@ -127,7 +127,10 @@ export default {
       if (this.hours > 0) {
         return `${this.hours} ${hoursWord}, ${this.minutes} ${minutesWord}, and ${this.seconds} ${secondsWord}`;
       }
-      return `${this.minutes} ${minutesWord}, and ${this.seconds} ${secondsWord}`;
+      if (this.minutes > 0){
+      	return `Only ${this.minutes} ${minutesWord}, and ${this.seconds} ${secondsWord}`; 
+      }
+      return `Only ${this.seconds} ${secondsWord}`;
     },
   },
 };
