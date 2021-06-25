@@ -19,6 +19,7 @@ const after = () => import("./../components/after.vue");
 export default {
   name: "Home",
   data: () => ({
+    currentTime: null,
     hours: 0,
     minutes: 0,
     seconds: 0,
@@ -26,14 +27,15 @@ export default {
   }),
   computed: {
     isBefore: function () {
-      return +new Date() < start_time * 1000;
+      return this.currentTime <= start_time * 1000;
     },
     isDuring: function () {
-      return +new Date() <= end_time * 1000;
+      return this.currentTime <= end_time * 1000;
     },
   },
   methods: {
     updateRemainingTime: function () {
+      this.currentTime = +new Date();
       const remainingTimeInSeconds = Math.floor(start_time - new Date() / 1000);
       this.seconds = Math.floor(remainingTimeInSeconds % 60);
       this.minutes = Math.floor((remainingTimeInSeconds / 60) % 60);
@@ -41,6 +43,7 @@ export default {
     },
   },
   mounted: function () {
+    this.currentTime = +new Date();
     this.polling = setInterval(this.updateRemainingTime, 1);
   },
   unmounted: function () {

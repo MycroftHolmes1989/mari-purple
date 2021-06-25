@@ -53,7 +53,7 @@
             elevation="4"
             x-large
           >
-            Watch it now!
+            Watch it here!
           </v-btn>
         </a>
       </v-col>
@@ -61,10 +61,7 @@
 
     <v-row class="pt-4">
       <v-col cols="12" align-content="center" justify="center" align="center">
-        <a
-          class="link"
-          href="https://discord.gg/SaAVF9tJGg"
-        >
+        <a class="link" href="https://discord.gg/SaAVF9tJGg">
           <v-icon class="footer-icons">mdi-discord</v-icon>
         </a>
         <a class="link" href="https://www.instagram.com/eeyore_mari/">
@@ -80,8 +77,8 @@
           class="link"
           href="https://www.youtube.com/channel/UC3gdavq5axNUwf7N8410flA"
         >
-          <v-icon class="footer-icons">mdi-youtube</v-icon>
-        </a><a class="link" href="https://www.instagram.com/eeyore_mari/">
+          <v-icon class="footer-icons">mdi-youtube</v-icon> </a
+        ><a class="link" href="https://www.instagram.com/eeyore_mari/">
           <v-icon class="footer-icons">mdi-instagram</v-icon>
         </a>
         <a class="link" href="https://www.twitch.tv/eeyore_ismy_sidekick">
